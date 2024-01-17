@@ -1,21 +1,42 @@
-class formaDeBolo {
-    constructor(saborDaMassa, saborRecheio){
-        this.saborDaMassa = saborDaMassa
-        this.saborRecheio = saborRecheio
-    }
 
-    escrever(){
-        console.log(`Um delicioso bolo de ${this.saborDaMassa} com recheio de ${this.saborRecheio}`)
-    }
+        class Heroi {
+            constructor(nome, idade, tipo){
+                this.nome = nome
+                this.idade = idade
+                this.tipo = tipo
+            }
 
-    assar(){
-        console.log("Bolo assando de " + this.saborDaMassa)
-    }
-}
+            atacar(){
+                let ataque;
 
-let boloFesta = new formaDeBolo("chocolate", "nutella")
-let boloPremium = new formaDeBolo("baunilha", "coco")
+            switch (this.tipo){
+                case "mago":
+                    ataque = "usou magia";
+                    break;
+                case "guerreiro":
+                    ataque = "usou espada";
+                    break;
+                case "monge":
+                    ataque = "usou artes marciais";
+                    break;
+                case "ninja":
+                    ataque = "usou shuriken";
+                    break;
+                default:
+                    ataque = "realizou um ataque"
 
-boloFesta.escrever()
-boloPremium.escrever()
-boloPremium.assar()
+            }
+
+                console.log(`O ${this.tipo} ${this.nome} atacou usando o ataque ${ataque}`)
+            }
+        }
+
+
+        const heroi1 = new Heroi('Herói 1', 25, 'mago');
+        const heroi2 = new Heroi('Herói 2', 30, 'guerreiro');
+
+        heroi1.atacar();
+        heroi2.atacar();
+        
+
+
